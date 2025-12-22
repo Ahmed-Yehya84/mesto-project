@@ -1,3 +1,5 @@
+live version: https://mesto-project-olive.vercel.app/
+
 📸 Mesto - Interactive Photo Gallery
 An interactive web application that allows users to explore a gallery of locations, add new places, and manage their personal profile. This project showcases modern frontend development practices, focusing on DOM manipulation, asynchronous-style UX, and BEM methodology.
 
