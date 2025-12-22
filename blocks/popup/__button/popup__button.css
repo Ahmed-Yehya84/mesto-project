@@ -1,0 +1,15 @@
+.popup__button {
+  padding: 13.6px 124px 18.5px 125px;
+  font-size: 18px;
+  background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+  max-width: 358px;
+  margin: 0 36px 36.5px 36px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.popup__button:hover {
+  opacity: 80%;
+}

@@ -25,4 +25,4 @@ const initialCards = [
   },
 ];
 
-console.log("cards.js");
+

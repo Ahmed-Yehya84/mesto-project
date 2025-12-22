@@ -1,0 +1,9 @@
+.popup__container {
+  background-color: #fff;
+  border-radius: 10px;
+
+  max-width: 430px;
+  width: 100%;
+  position: relative; /* Anchor for the X button */
+  box-sizing: border-box;
+}
