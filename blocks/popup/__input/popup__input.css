@@ -1,9 +1,27 @@
 .popup__input {
+  /* 1. Layout & Spacing */
+  display: block;
+  margin: 0 36px; /* 0 top/bottom, 36px left/right */
+  width: calc(100% - 72px); /* Subtracts the total horizontal margin (36+36) */
+  box-sizing: border-box;
+
+  /* 2. Visual Style */
   padding-bottom: 13px;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 20%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  line-height: 1.2;
 }
 
 .popup__input::placeholder {
   color: #c4c4c4;
+}
+
+.popup__input:first-of-type {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.popup__input:last-of-type {
+  margin-bottom: 48px; /* Larger gap before the button */
 }

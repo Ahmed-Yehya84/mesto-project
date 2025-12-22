@@ -1,0 +1,12 @@
+.popup_type_image {
+  display: flex; /* Helps with centering */
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9); /* Darker overlay for images */
+}
+
+.popup_type_image .popup__close {
+  position: absolute;
+  top: -40px; /* Move it above the image */
+  right: -40px; /* Move it to the right of the image */
+}

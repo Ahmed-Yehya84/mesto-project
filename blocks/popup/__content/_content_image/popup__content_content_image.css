@@ -1,0 +1,8 @@
+.popup__content_content_image {
+  position: relative; /* This is the 'anchor' for the close button */
+  background-color: transparent;
+  width: auto;
+  max-width: 75vw;
+  display: flex;
+  flex-direction: column;
+}

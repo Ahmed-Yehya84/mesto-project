@@ -1,0 +1,6 @@
+.popup__content {
+  background-color: transparent;
+  box-shadow: none;
+  width: auto;
+  max-width: 75vw;
+}

@@ -3,4 +3,5 @@
   height: 282px;
   object-fit: cover; /* Keeps images from looking stretched */
   display: block;
+  cursor: pointer;
 }
