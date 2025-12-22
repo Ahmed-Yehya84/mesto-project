@@ -1,0 +1,7 @@
+.card {
+  position: relative;
+  width: 282px;
+  /* BEM: make sure the card is a block */
+  display: flex;
+  flex-direction: column;
+}

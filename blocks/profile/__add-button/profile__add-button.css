@@ -1,0 +1,17 @@
+.profile__add-button {
+  margin-left: auto; /* This magic line pushes the button to the right border */
+  width: 150px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__add-button:hover {
+  opacity: 0.6; /* Makes it slightly transparent on hover */
+  transition: opacity 0.2s ease; /* Makes the transition smooth */
+}

@@ -1,0 +1,18 @@
+.profile__edit-button {
+  /* Reset button defaults */
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevents the button from squishing if the name is long */
+}
+
+.profile__edit-button:hover {
+  opacity: 0.6; /* Makes it slightly transparent on hover */
+  transition: opacity 0.2s ease; /* Makes the transition smooth */
+}

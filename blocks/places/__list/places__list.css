@@ -1,0 +1,16 @@
+.places__list {
+  display: grid;
+  /* Three columns, each exactly 282px wide */
+  grid-template-columns: 282px 282px 282px;
+  /* The space between the cards */
+  column-gap: 17px;
+  /* The space between rows (adjust as needed) */
+  row-gap: 20px;
+
+  /* Center the whole grid on the page */
+  justify-content: center;
+
+  list-style: none;
+  padding: 0;
+  margin: 50px auto 0;
+}

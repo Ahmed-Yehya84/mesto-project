@@ -1,0 +1,5 @@
+.profile__header {
+  display: flex; /* This is the "magic" line */
+  align-items: center;
+  gap: 18px; /* Adds space between the name and the button */
+}

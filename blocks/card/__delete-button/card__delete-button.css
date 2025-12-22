@@ -1,0 +1,25 @@
+.card__delete-button {
+  position: absolute; /* This pulls it out of the flow */
+  top: 18px; /* Distance from the top of the card */
+  right: 15px; /* Distance from the right of the card */
+
+  /* Reset button styles */
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  /* Ensure it sits on top of the image */
+  z-index: 1;
+}
+
+.card__delete-button img {
+  width: 18px; /* Set the size of your 'Group.png' */
+  height: 19px;
+  display: block;
+}
+
+.card__delete-button:hover img {
+  opacity: 0.6; /* Makes it slightly transparent on hover */
+  transition: opacity 0.2s ease; /* Makes the transition smooth */
+}

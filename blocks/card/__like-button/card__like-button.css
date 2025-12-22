@@ -1,0 +1,19 @@
+.card__like-button {
+  background: transparent;
+  border: none; /* Removes the default border */
+  outline: none; /* Removes the blue ring when clicked */
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__like-button:focus {
+  outline: none; /* Ensures no border appears on click */
+}
+
+.card__like-button:hover img {
+  opacity: 0.6; /* Makes it slightly transparent on hover */
+  transition: opacity 0.2s ease; /* Makes the transition smooth */
+}
