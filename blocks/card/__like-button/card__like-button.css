@@ -17,3 +17,10 @@
   opacity: 0.6; /* Makes it slightly transparent on hover */
   transition: opacity 0.2s ease; /* Makes the transition smooth */
 }
+
+@media screen and (max-width: 620px) {
+  .card__like-button {
+    width: 22px; /* Standard icon size */
+    height: 19px;
+  }
+}

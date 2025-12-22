@@ -16,8 +16,14 @@
 
 @media screen and (max-width: 500px) {
   .popup__button {
-    font-size: 14px;
+    /* Reset the desktop padding that was making it too bulky */
+    padding: 14px 0;
+
+    /* Ensure it stays centered and properly sized */
+    width: calc(100% - 44px); /* Matches the input width */
     margin: 0 22px 25px;
-    padding: 14px 0; /* Simpler padding for mobile buttons */
+
+    font-size: 14px;
+    line-height: 17px;
   }
 }

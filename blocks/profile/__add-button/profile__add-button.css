@@ -17,8 +17,10 @@
 }
 
 @media screen and (max-width: 620px) {
+  /* Adjust the Add Button width to match the Figma mobile spec */
   .profile__add-button {
-    margin-left: 0;
-    width: 100%; /* Or calc(100% - 38px) depending on your design padding */
+    margin: 0 auto; /* Centers the button */
+    width: 282px; /* Matches the width of a card */
+    height: 50px;
   }
 }
