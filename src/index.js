@@ -6,7 +6,7 @@ import {
   closeModal,
   handleOverlayClick,
 } from "./components/modal.js";
-
+console.log("working");
 // --- DOM ELEMENTS ---
 const placesList = document.querySelector(".places__list");
 
