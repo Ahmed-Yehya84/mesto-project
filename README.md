@@ -1,7 +1,3 @@
-That’s a great call. Mentioning Responsiveness is a huge green flag for recruiters because it shows you understand the importance of mobile-first design and cross-device compatibility.
-
-Here is the updated, high-impact README.md in both languages.
-
 📸 Mesto - Interactive Gallery
 An interactive web application that allows users to explore a gallery of locations, add new places, and manage their personal profile. This project showcases modern frontend development practices, focusing on Object-Oriented design principles, asynchronous-style UX, and BEM methodology.
 
