@@ -7,3 +7,9 @@
   position: relative; /* Anchor for the X button */
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 500px) {
+  .popup__container {
+    max-width: calc(100% - 38px);
+  }
+}

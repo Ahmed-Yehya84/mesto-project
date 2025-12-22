@@ -3,3 +3,11 @@
   color: #fff;
   font-size: 12px;
 }
+
+@media screen and (max-width: 500px) {
+  /* Specific fix for image popup caption on small screens */
+  .popup__caption {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
