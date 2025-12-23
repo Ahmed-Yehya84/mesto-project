@@ -7,7 +7,7 @@ import {
   handleOverlayClick,
 } from "./components/modal.js";
 import { enableValidation, clearValidation } from "./components/validation.js";
-
+import { getInitialCards } from "./components/api.js";
 // --- CONFIGURATION ---
 const validationConfig = {
   formSelector: ".popup__form",
@@ -68,9 +68,21 @@ function handleImageClick(data) {
  */
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
-  profileTitle.textContent = nameInput.value;
-  profileDescription.textContent = jobInput.value;
-  closeModal(popupEdit);
+  const submitButton = evt.submitter;
+
+  // 1. Start loading state
+  renderLoading(true, submitButton);
+
+  // 2. Simulate API delay (or use real updateProfile fetch if we had a backend)
+  setTimeout(() => {
+    profileTitle.textContent = nameInput.value;
+    profileDescription.textContent = jobInput.value;
+
+    closeModal(popupEdit);
+
+    // 3. Reset loading state after closing
+    renderLoading(false, submitButton);
+  }, 600);
 }
 
 /**
@@ -78,29 +90,54 @@ function handleProfileFormSubmit(evt) {
  */
 function handleCardFormSubmit(evt) {
   evt.preventDefault();
+  const submitButton = evt.submitter;
+
+  renderLoading(true, submitButton, "Создать", "Создание...");
 
   const cardData = {
     name: placeNameInput.value,
     link: urlInput.value,
   };
 
-  const newCard = createCard(
-    cardData,
-    handleDelete,
-    handleLike,
-    handleImageClick
-  );
+  // Simulate "Post" delay
+  setTimeout(() => {
+    const newCard = createCard(
+      cardData,
+      handleDelete,
+      handleLike,
+      handleImageClick
+    );
+    placesList.prepend(newCard);
 
-  placesList.prepend(newCard);
-  formNewPlace.reset();
-  closeModal(popupAdd);
+    formNewPlace.reset();
+    closeModal(popupAdd);
+
+    renderLoading(false, submitButton, "Создать", "Создание...");
+  }, 600);
 }
-
 // --- INITIAL RENDER ---
-initialCards.forEach((item) => {
-  const card = createCard(item, handleDelete, handleLike, handleImageClick);
-  placesList.append(card);
-});
+// initialCards.forEach((item) => {
+//   const card = createCard(item, handleDelete, handleLike, handleImageClick);
+//   placesList.append(card);
+// });
+
+getInitialCards()
+  .then((cards) => {
+    cards.forEach((item) => {
+      // We pass null for userId since Unsplash doesn't use our specific IDs
+      const card = createCard(
+        item,
+        handleDelete,
+        handleLike,
+        handleImageClick,
+        null
+      );
+      placesList.append(card);
+    });
+  })
+  .catch((err) => {
+    console.error("Failed to load images from Unsplash:", err);
+  });
 
 // --- EVENT LISTENERS ---
 
@@ -137,6 +174,19 @@ document.querySelectorAll(".popup__close").forEach((button) => {
 document.querySelectorAll(".popup").forEach((popup) => {
   popup.addEventListener("mousedown", handleOverlayClick);
 });
+
+function renderLoading(
+  isLoading,
+  buttonElement,
+  buttonText = "Сохранить",
+  loadingText = "Сохранение..."
+) {
+  if (isLoading) {
+    buttonElement.textContent = loadingText;
+  } else {
+    buttonElement.textContent = buttonText;
+  }
+}
 
 // --- INITIALIZATION ---
 
