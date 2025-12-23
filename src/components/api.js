@@ -1,7 +1,7 @@
 const config = {
   baseUrl: "https://api.unsplash.com",
   headers: {
-    Authorization: "Client-ID PbODtBY7mSX15jV87sDThNDpTEQnaksTDHGAGwFKHf0",
+    Authorization: `Client-ID ${process.env.UNSPLASH_ACCESS_KEY}`,
   },
 };
 
