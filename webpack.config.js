@@ -59,6 +59,8 @@ module.exports = {
     new CleanWebpackPlugin(), // Automatically cleans the dist folder on every build
     new MiniCssExtractPlugin(), // Extracts CSS into a separate file
 
-    new Dotenv(),
+    new Dotenv({
+      systemvars: true, // This allows Webpack to grab variables from Vercel's settings
+    }),
   ],
 };
